@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  .registro-container
+    h1(class='title') #{title}
+
+    form(action='/registrar-usuario' method='POST' class='registro-form')
+      .form-group
+        label(for='nombre' class='form-label') Usuario
+        input(type='text' name='usuario' id='usuario' placeholder='Nombre completo' class='form-input', required)
+
+      .form-group
+        label(for='email' class='form-label') Email
+        input(type='email' name='correo' id='correo' placeholder='Correo electrónico' class='form-input', required)
+      
+      .form-group
+        label(for='password' class='form-label') Contraseña
+        input(type='password' name='password' id='password' placeholder='Contraseña' class='form-input', required)
+
+      .form-group
+        button(type='submit' class='submit-button') Registrarte
